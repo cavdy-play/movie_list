@@ -13,7 +13,7 @@ const CarouselTop = ({movies: allMovies}) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    const newMovies = [...allMovies]
+    const newMovies = allMovies.results ? [...allMovies.results] : []
     setMovies(newMovies.slice(0, 4))
   }, [allMovies])
 
